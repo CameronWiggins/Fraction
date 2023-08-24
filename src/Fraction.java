@@ -29,5 +29,11 @@ public class Fraction {
         return (a / gcd(a, b)) * b;
     }
 
-    
+    public String add(Fraction f2)
+    {
+        int commonDenom = lcm(this.denominaator)
+        
+    }
+
+
 }
