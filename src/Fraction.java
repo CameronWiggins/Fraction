@@ -46,6 +46,13 @@ public class Fraction {
         return sum;
     }
 
+    public Fraction multiply(Fraction other)
+    {
+        Fraction product = new Fraction(this.numerator * other.numerator, this.denominator * other.denominator);
+        product.reduce();
+        return product;
+    }
+
     public String toString()
     {
         return this.numerator + "/" + this.denominator;
