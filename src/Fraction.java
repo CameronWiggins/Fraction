@@ -42,9 +42,13 @@ public class Fraction {
         int multiOne = leastComMulti / this.denominator;
         int multiTwo = leastComMulti / other.denominator;
         Fraction sum = new Fraction((this.numerator * multiOne) + (other.numerator * multiTwo), leastComMulti);
+        sum.reduce();
         return sum;
     }
 
-    
+    public String toString()
+    {
+        return this.numerator + "/" + this.denominator;
+    }
 
 }
