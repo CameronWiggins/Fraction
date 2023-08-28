@@ -36,5 +36,15 @@ public class Fraction {
         this.denominator /= GreatComDenom;
     }
 
+    public Fraction add(Fraction other)
+    {
+        int leastComMulti = lcm(this.denominator, other.denominator);
+        int multiOne = leastComMulti / this.denominator;
+        int multiTwo = leastComMulti / other.denominator;
+        Fraction sum = new Fraction((this.numerator * multiOne) + (other.numerator * multiTwo), leastComMulti);
+        return sum;
+    }
+
+    
 
 }
